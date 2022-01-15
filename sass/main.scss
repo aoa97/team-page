@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=PT+Serif:wght@700&family=Poppins:wght@400;600&display=swap");
+
+// Vars
+$black: #000;
+$gray: #a9a9a9;
+
+html {
+  font-size: 62.5%; // 1rem = 10px
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 4rem 10rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: 1.6rem;
+
+  @media (max-width: 787px) {
+    padding: 2rem 5rem;
+  }
+}
+
+header {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @media (max-width: 787px) {
+    grid-template-columns: 1fr;
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+  }
+
+  h2 {
+    font-family: "PT Serif", serif;
+    font-weight: 700;
+    font-size: 3rem;
+  }
+
+  section {
+    font-family: "Poppins", sans-serif;
+
+    h4 {
+      font-weight: 600;
+      font-size: 1.9rem;
+    }
+
+    p {
+      font-weight: 400;
+      font-size: 1.5rem;
+    }
+  }
+}
+
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 9rem 8rem;
+  margin: 8rem 0;
+
+  @media (max-width: 787px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+
+  .item {
+    position: relative;
+
+    @media (max-width: 787px) {
+      &:nth-child(even) {
+        margin-top: 9rem;
+      }
+    }
+
+    @media (min-width: 788px) {
+      &:nth-child(2),
+      &:nth-child(5) {
+        margin-top: 9rem;
+      }
+    }
+
+    img {
+      width: 100%;
+    }
+
+    h5 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 600;
+      font-size: 1.8rem;
+
+      @media (max-width: 787px) {
+        font-size: 1.3rem;
+      }
+    }
+
+    p {
+      font-family: "PT Serif", serif;
+      font-weight: 400;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      transform: rotate(90deg);
+      position: absolute;
+      top: 45px;
+      right: -68px;
+
+      @media (max-width: 787px) {
+        font-size: 0.8rem;
+        top: 30px;
+        right: -45px;
+      }
+    }
+  }
+}
+
+footer {
+  color: $gray;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  text-align: center;
+
+  span {
+    font-weight: 700;
+  }
+}
